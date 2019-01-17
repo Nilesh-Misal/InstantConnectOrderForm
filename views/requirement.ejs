@@ -1,0 +1,572 @@
+<html>
+    <head>
+                
+            <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instant Connect Order form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    
+    </head>
+    <title>Client Requirement Form</title>
+
+    <body>
+          <form action="/requirements/create" method="POST">
+        <div class="main">
+            <!-- 1 open -->
+
+            <div class="panel-group" id="accordion">
+
+            <!-- <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">IC TC+DB</a>
+                      </h4>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse in">
+ -->
+
+
+
+               
+                       <!-- start -->
+                       <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">IC TC+DB</a>
+                              </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="col-20">
+                                      <label>CPU</label>
+                                  </div>
+                                  <div class="col-80">
+                                        <input type="text" id="ictcbd_cpu" name="ictcbd_cpu" placeholder=".." >
+                                  </div>
+                                  <div class="col-20">
+                                        <label>RAM</label>
+                                    </div>
+                                    <div class="col-80">
+                                          <input type="text" id="ictcbd_ram" name="ictcbd_ram" placeholder=".." >
+                                    </div>
+                                    <div class="col-20">
+                                            <label>DISK</label>
+                                        </div>
+                                        <div class="col-80">
+                                              <input type="text" id="ictcbd_disk" name="ictcbd_disk" placeholder=".." >
+                                        </div>
+                                        <div class="col-20">
+                                                <label>FQDN</label>
+                                            </div>
+                                            <div class="col-80">
+                                                  <input type="text" id="ictcbd_fqdn" name="ictcbd_fqdn" placeholder=".." >
+                                            </div>
+                                            <div class="col-20">
+                                                <label>IP Address</label>
+                                            </div>
+                                            <div class="col-80">
+                                                  <input type="text" id="ictcbd_ipaddress" name="ictcbd_ipaddress" placeholder=".." >
+                                            </div>
+                                            <div class="col-20">
+                                                <label>MAC Address</label>
+                                            </div>
+                                            <div class="col-80">
+                                                  <input type="text" id="ictcbd_macaddress" name="ictcbd_macaddress" placeholder=".." >
+                                            </div>
+                                            
+
+                              </div>
+                            </div>
+                        </div>
+                                <!-- start -->
+                                <div class="panel panel-default">
+                                     <div class="panel-heading">
+                                       <h4 class="panel-title">
+                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Unified Media Services(UMS1) </a>
+                                       </h4>
+                                     </div>
+                                     <div id="collapse2" class="panel-collapse collapse in">
+                                       <div class="panel-body">
+                                           <div class="col-20">
+                                               <label>CPU</label>
+                                           </div>
+                                           <div class="col-80">
+                                                 <input type="text" id="ums1_cpu" name="ums1_cpu" placeholder=".." >
+                                           </div>
+                                           <div class="col-20">
+                                                 <label>RAM</label>
+                                             </div>
+                                             <div class="col-80">
+                                                   <input type="text" id="ums1_ram" name="ums1_ram" placeholder=".." >
+                                             </div>
+                                             <div class="col-20">
+                                                     <label>DISK</label>
+                                                 </div>
+                                                 <div class="col-80">
+                                                       <input type="text" id="ums1_disk" name="ums1_disk" placeholder=".." >
+                                                 </div>
+                                                 <div class="col-20">
+                                                         <label>FQDN</label>
+                                                     </div>
+                                                     <div class="col-80">
+                                                           <input type="text" id="ums1_fqdn" name="ums1_fqdn" placeholder=".." >
+                                                     </div>
+                                                     <div class="col-20">
+                                                         <label>IP Address</label>
+                                                     </div>
+                                                     <div class="col-80">
+                                                           <input type="text" id="ums1_ipdaress" name="ums1_ipdaress" placeholder=".." >
+                                                     </div>
+                                                     <div class="col-20">
+                                                         <label>MAC Address</label>
+                                                     </div>
+                                                     <div class="col-80">
+                                                           <input type="text" id="ums1_macaddress" name="ums1_macaddress" placeholder=".." >
+                                                     </div>
+                                                     
+         
+                                       </div>
+                                     </div>
+                                </div>
+                                            <!-- start -->
+                                            <div class="panel panel-default">
+                                                 <div class="panel-heading">
+                                                   <h4 class="panel-title">
+                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Unified Media Services(UMS2) </a>
+                                                   </h4>
+                                                 </div>
+                                                 <div id="collapse3" class="panel-collapse collapse in">
+                                                   <div class="panel-body">
+                                                       <div class="col-20">
+                                                           <label>CPU</label>
+                                                       </div>
+                                                       <div class="col-80">
+                                                             <input type="text" id="ums2_cpu" name="ums2_cpu" placeholder=".." >
+                                                       </div>
+                                                       <div class="col-20">
+                                                             <label>RAM</label>
+                                                         </div>
+                                                         <div class="col-80">
+                                                               <input type="text" id="ums2_ram" name="ums2_ram" placeholder=".." >
+                                                         </div>
+                                                         <div class="col-20">
+                                                                 <label>DISK</label>
+                                                             </div>
+                                                             <div class="col-80">
+                                                                   <input type="text" id="ums2_disk" name="ums2_disk" placeholder=".." >
+                                                             </div>
+                                                             <div class="col-20">
+                                                                     <label>FQDN</label>
+                                                                 </div>
+                                                                 <div class="col-80">
+                                                                       <input type="text" id="ums2_fqdn" name="ums2_fqdn" placeholder=".." >
+                                                                 </div>
+                                                                 <div class="col-20">
+                                                                     <label>IP Address</label>
+                                                                 </div>
+                                                                 <div class="col-80">
+                                                                       <input type="text" id="ums2_ipdaress" name="ums2_ipdaress" placeholder=".." >
+                                                                 </div>
+                                                                 <div class="col-20">
+                                                                     <label>MAC Address</label>
+                                                                 </div>
+                                                                 <div class="col-80">
+                                                                       <input type="text" id="ums2_macaddress" name="ums2_macaddress" placeholder=".." >
+                                                                 </div>
+                                                                 
+                     
+                                                   </div>
+                                                 </div>
+                                                 </div>
+     <!-- start -->
+     <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Location </a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse in">
+              <div class="panel-body">
+                  <div class="col-20">
+                      <label>CPU</label>
+                  </div>
+                  <div class="col-80">
+                        <input type="text" id="location_cpu" name="location_cpu" placeholder=".." >
+                  </div>
+                  <div class="col-20">
+                        <label>RAM</label>
+                    </div>
+                    <div class="col-80">
+                          <input type="text" id="location_ram" name="location_ram" placeholder=".." >
+                    </div>
+                    <div class="col-20">
+                            <label>DISK</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="location_disk" name="location_disk" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                                <label>FQDN</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="location_fqdn" name="location_fqdn" placeholder=".." >
+                            </div>
+                            <div class="col-20">
+                                <label>IP Address</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="location_ipdaress" name="location_ipdaress" placeholder=".." >
+                            </div>
+                            <div class="col-20">
+                                <label>MAC Address</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="location_macaddress" name="location_macaddress" placeholder=".." >
+                            </div>
+                            
+
+              </div>
+            </div>
+            </div>
+     <!-- start -->
+     <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Notifier </a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse in">
+              <div class="panel-body">
+                  <div class="col-20">
+                      <label>CPU</label>
+                  </div>
+                  <div class="col-80">
+                        <input type="text" id="notifier_cpu" name="notifier_cpu" placeholder=".." >
+                  </div>
+                  <div class="col-20">
+                        <label>RAM</label>
+                    </div>
+                    <div class="col-80">
+                          <input type="text" id="notifier_ram" name="notifier_ram" placeholder=".." >
+                    </div>
+                    <div class="col-20">
+                            <label>DISK</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="notifier_disk" name="notifier_disk" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                                <label>FQDN</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="notifier_fqdn" name="notifier_fqdn" placeholder=".." >
+                            </div>
+                            <div class="col-20">
+                                <label>IP Address</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="notifier_ipdaress" name="notifier_ipdaress" placeholder=".." >
+                            </div>
+                            <div class="col-20">
+                                <label>MAC Address</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="notifier_macaddress" name="notifier_macaddress" placeholder=".." >
+                            </div>
+                            
+
+              </div>
+            </div>
+            </div>
+ <!-- start -->
+ <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Reporter </a>
+          </h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse in">
+          <div class="panel-body">
+              <div class="col-20">
+                  <label>CPU</label>
+              </div>
+              <div class="col-80">
+                    <input type="text" id="reporter_cpu" name="reporter_cpu" placeholder=".." >
+              </div>
+              <div class="col-20">
+                    <label>RAM</label>
+                </div>
+                <div class="col-80">
+                      <input type="text" id="reporter_ram" name="reporter_ram" placeholder=".." >
+                </div>
+                <div class="col-20">
+                        <label>DISK</label>
+                    </div>
+                    <div class="col-80">
+                          <input type="text" id="reporter_disk" name="reporter_disk" placeholder=".." >
+                    </div>
+                    <div class="col-20">
+                            <label>FQDN</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="reporter_fqdn" name="reporter_fqdn" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                            <label>IP Address</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="reporter_ipdaress" name="reporter_ipdaress" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                            <label>MAC Address</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="reporter_macaddress" name="reporter_macaddress" placeholder=".." >
+                        </div>
+                        
+
+          </div>
+        </div>
+        </div>
+<!-- start -->
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Radio Control Server (RCS) </a>
+          </h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse in">
+          <div class="panel-body">
+              <div class="col-20">
+                  <label>CPU</label>
+              </div>
+              <div class="col-80">
+                    <input type="text" id="rcs_cpu" name="rcs_cpu" placeholder=".." >
+              </div>
+              <div class="col-20">
+                    <label>RAM</label>
+                </div>
+                <div class="col-80">
+                      <input type="text" id="rcs_ram" name="rcs_ram" placeholder=".." >
+                </div>
+                <div class="col-20">
+                        <label>DISK</label>
+                    </div>
+                    <div class="col-80">
+                          <input type="text" id="rcs_disk" name="rcs_disk" placeholder=".." >
+                    </div>
+                    <div class="col-20">
+                            <label>FQDN</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="rcs_fqdn" name="rcs_fqdn" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                            <label>IP Address</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="rcs_ipdaress" name="rcs_ipdaress" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                            <label>MAC Address</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="rcs_macaddress" name="rcs_macaddress" placeholder=".." >
+                        </div>
+                        
+
+          </div>
+        </div>
+        </div>
+
+<!-- start -->
+<div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Cisco Expressway VCS </a>
+          </h4>
+        </div>
+        <div id="collapse8" class="panel-collapse collapse in">
+                <div class="panel-body">
+                        <div class="col-20">
+                            <label>CPU</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="vcs_cpu" name="vcs_cpu" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                              <label>RAM</label>
+                          </div>
+                          <div class="col-80">
+                                <input type="text" id="vcs_ram" name="vcs_ram" placeholder=".." >
+                          </div>
+                          <div class="col-20">
+                                  <label>DISK</label>
+                              </div>
+                              <div class="col-80">
+                                    <input type="text" id="vcs_disk" name="vcs_disk" placeholder=".." >
+                              </div>
+                              <div class="col-20">
+                                      <label>FQDN</label>
+                                  </div>
+                                  <div class="col-80">
+                                        <input type="text" id="vcs_fqdn" name="vcs_fqdn" placeholder=".." >
+                                  </div>
+                                  <div class="col-20">
+                                      <label>IP Address</label>
+                                  </div>
+                                  <div class="col-80">
+                                        <input type="text" id="vcs_ipdaress" name="vcs_ipdaress" placeholder=".." >
+                                  </div>
+                                  <div class="col-20">
+                                      <label>MAC Address</label>
+                                  </div>
+                                  <div class="col-80">
+                                        <input type="text" id="vcs_macaddress" name="vcs_macaddress" placeholder=".." >
+                                  </div>
+                                  
+          
+                    </div>
+     </div>
+    
+</div>
+
+
+
+
+
+
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Reverse Proxy Server  </a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse in">
+              <div class="panel-body">
+                      <div class="col-20">
+                          <label>CPU</label>
+                      </div>
+                      <div class="col-80">
+                            <input type="text" id="rps_cpu" name="rps_cpu" placeholder=".." >
+                      </div>
+                      <div class="col-20">
+                            <label>RAM</label>
+                        </div>
+                        <div class="col-80">
+                              <input type="text" id="rps_ram" name="rps_ram" placeholder=".." >
+                        </div>
+                        <div class="col-20">
+                                <label>DISK</label>
+                            </div>
+                            <div class="col-80">
+                                  <input type="text" id="rps_disk" name="rps_disk" placeholder=".." >
+                            </div>
+                            <div class="col-20">
+                                    <label>FQDN</label>
+                                </div>
+                                <div class="col-80">
+                                      <input type="text" id="rps_fqdn" name="rps_fqdn" placeholder=".." >
+                                </div>
+                                <div class="col-20">
+                                    <label>IP Address</label>
+                                </div>
+                                <div class="col-80">
+                                      <input type="text" id="rps_ipdaress" name="rps_ipdaress" placeholder=".." >
+                                </div>
+                                <div class="col-20">
+                                    <label>MAC Address</label>
+                                </div>
+                                <div class="col-80">
+                                      <input type="text" id="rps_macaddress" name="rps_macaddress" placeholder=".." >
+                                </div>
+                                
+        
+                  </div>
+   </div>
+  
+</div>
+ </div>
+ <div class="btn-group">
+       <input type="submit" id="buttons" value="Submit">
+       <a href="">Generate PDF </a>
+        <input type="button" value="Generate PDF" onclick="getPDF()"> </button>
+        <button class="button">Reset</button>
+        <!-- <button class="button">Button</button>
+        <button class="button">Button</button> -->
+      </div>
+ </div>
+
+ <script>
+ 
+            function getPDF(){
+               var doc=new jsPDF();
+           
+               doc.formHTML($('#main').get(0),20,20,{
+                   'width':500
+               });
+           
+               doc.save('Test.pdf')
+           }
+            </script>
+           
+ </form>
+ <script>
+ 
+ function getPDF(){
+    var doc=new jsPDF();
+
+    doc.formHTML($('#main').get(0),20,20,{
+        'width':500
+    });
+
+    doc.save('Test.pdf')
+}
+ </script>
+
+ <!-- <script>
+        $('#buttons').click(function(){
+
+            var doc=new jsPDF();
+            var ictcbd_cpu= $('#ictcbd_cpu').val();
+            var ictcbd_ram=$('#ictcbd_ram').val();
+            var ictcbd_disk=$('#ictcbd_disk').val();
+
+            doc.text(23,81,ictcbd_cpu);
+            doc.text(23,122,ictcbd_ram);
+            doc.text(23,202,ictcbd_disk);
+
+            doc.save()
+        })
+ </script> -->
+ </body>
+</html>
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </body>
+</html>

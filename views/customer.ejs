@@ -1,26 +1,245 @@
+<!-- <h1> Hello Instance Connect</h1> -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instant Connect Order form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Instant Connect Order From</title>
-    
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
+    <!-- <script src="main.js"></script> -->
 </head>
 <body>
+  
+<form action="/customer/create" id="myForm" method="post">
+       
+    <div class="header">
+        <div class="image">
+                <img src="/images/instantConnect.png"  style="width:300px; height:90px; "> 
 
-    <form action="/customer/create" id="myForm" name="myForm" class="myForm" method="POST">
-      title:<input type="text" name="title"><br></br>
-      cpu:<input type="text" name="cpu"><br></br>
-      ram:<input type="text" name="ram"><br></br>
-      disk:<input type="text" name="disk"><br></br>
+                <div class="name">
+                    <h1>Instant Connect Order Form</h1>
+                </div>
+                       
+              </div>
+            
+        
+   </div> 
+    
+     
+        
+     
+            <!-- <div class="mainblock"> -->
+                    <!-- <div class="group">     -->
+                <div class="container">       
+                   
+        
+        <div class="main">
+            <!-- 1 open -->
+                <div class="panel-group" id="accordion">
+                       <!-- start -->
+                       <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Customer details</a>
+                              </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="col-20">
+                                      <label>Contact person</label>
+                                  </div>
+                                  <div class="col-80">
+                                        <input type="text" id="conatctperson" name="conatctperson" placeholder="Enter name.." >
+                                  </div>
+                                  <div class="col-20">
+                                        <label>Company name</label>
+                                    </div>
+                                    <div class="col-80">
+                                          <input type="text" id="companyname" name="companyname" placeholder="Enter Company name.." >
+                                    </div>
+                                    <div class="col-20">
+                                            <label>Address</label>
+                                        </div>
+                                        <div class="col-80">
+                                              <input type="text" id="address" name="address" placeholder="Enter address.." >
+                                        </div>
+                                        <div class="col-20">
+                                                <label>Postal Code</label>
+                                            </div>
+                                            <div class="col-80">
+                                                  <input type="text" id="postalcode" name="postalcode" placeholder="Enter postal code.." >
+                                            </div>
+                              </div>
+                            </div>
 
-      <input type="submit" value="Submit">
+                   </div>
+                       <!-- finishes -->
+                       <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Company details</a>
+                          </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                          <div class="panel-body">
+                                <div class="col-20">
+                                    <label>Company name</label>
+                                </div>
+                                <div class="col-80">
+                                    <input type="text" id="admincompanyname" name="admincompanyname" placeholder="Enter Company name.." >
+                                </div>
+                                
+                                <div class="col-20">
+                                    <label>Admin office address</label>
+                                </div>
+                                <div class="col-80">
+                                    <input type="text" id="admin_Office_address" name="admin_Office_address" placeholder="Enter admin office address .." >
+                                </div>
+
+                                <div class="col-20">
+                                    <label>Admin Contact person </label>
+                                </div>
+                                <div class="col-80">
+                                    <input type="text" id="admin_Contact_person" name="admin_Contact_person" placeholder="Enter admin contact person .." >
+                                </div>
+
+                              <div class="col-20">
+                                     <label>Contact number</label>
+                                 </div>
+                             <div class="col-80">
+                                  <input type="tel" id="admin_conatct_Number" name="admin_conatct_Number" placeholder="Enter number.." >
+                             </div>
+
+                             <div class="col-20">
+                                    <label>Email address</label>
+                                </div>
+                            <div class="col-80">
+                                 <input type="text" id="admin_email_address" name="admin_email_address" placeholder="Enter email.." >
+                            </div>
+
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Installation details</a>
+                              </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                    <div class="col-20">
+                                            <label>Installation site address</label>
+                                        </div>
+                                    <div class="col-80">
+                                         <input type="text" id="installation_site_address" name="installation_site_address" placeholder="Enter Installation address.." >
+                                    </div>
+
+                                    <div class="col-20">
+                                            <label>Contact person name</label>
+                                        </div>
+                                    <div class="col-80">
+                                         <input type="text" id="conatct_person_name" name="conatct_person_name" placeholder="Enter Contact person name.." >
+                                    </div>
+
+                                    <div class="col-20">
+                                            <label>Contact number</label>
+                                        </div>
+                                    <div class="col-80">
+                                         <input type="tel" id="adminaddress" name="adminaddress" placeholder="Enter Contact no.." >
+                                    </div>
+                                    <div class="col-20">
+                                            <label>Email address</label>
+                                        </div>
+                                    <div class="col-80">
+                                         <input type="text" id="email" name="email" placeholder="Enter email.." >
+                                    </div>
+      
+                            </div>
+                            </div>
+                          </div>
+                     
+
+                        <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Salesforce details</a>
+                                  </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                        <div class="col-20">
+                                                <label>Sales person name</label>
+                                            </div>
+                                        <div class="col-80">
+                                             <input type="text" id="sales_person_name" name="sales_person_name" placeholder="Enter sales person name .." >
+                                        </div>
+
+                                        <div class="col-20">
+                                                <label>Contact number</label>
+                                            </div>
+                                        <div class="col-80">
+                                             <input type="text" id="seles_Person_contact_no" name="seles_Person_contact_no" placeholder="Enter contact no.." >
+                                        </div>
+
+                                        <div class="col-20">
+                                                <label>Email address</label>
+                                            </div>
+                                        <div class="col-80">
+                                             <input type="text" id="sales_Person_email" name="sales_Person_email" placeholder="Enter email.." >
+                                        </div>
+                                        <div class="col-20">
+                                                <label>Reference ID</label>
+                                            </div>
+                                        <div class="col-80">
+                                             <input type="text" id="sales_person_reference_id" name="sales_person_reference_id" placeholder="Enter reference ID.." >
+                                        </div>
+                                </div>
+                                </div>
+                              </div>
+                            </div> 
+                        </div> 
+
+                        <div class="buttons">
+                            <center>
+                                <input type="submit" value="Save">
+                                <input type="reset" value="Reset">
 
 
-</form>    
+                            </center>
+                        </div><br/>
+                        <center>
+                        <a href="/customer/find" >All Users</a>
+                        <a href="/customer/index" >Login</a>
+                    </center>
+        </div>
 
- 
+               
+               <!-- 1 closed -->
+                </div>
+
+
+            
+
+    
+<!-- 1st two divs -->
+    </div>
+    </div>
+</div>
+</div>
+</form>
+
+
 </body>
 </html>

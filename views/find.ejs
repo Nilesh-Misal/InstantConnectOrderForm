@@ -1,0 +1,66 @@
+ <html>
+
+ <body>
+   <div class="allUsers">
+    <% if (users.length > 0) {%>
+      <table class="table table-hovered">
+          <thead class="thead-dark">
+              <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Contact person</th>
+                  <th scope="col">Company name</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Postal Code</th>
+                  <th scope="col">Company name</th>
+                  <th scope="col">Admin office address</th>
+                  <th scope="col">Admin Contact person</th>
+                  <th scope="col">Contact number</th>
+                  <th scope="col">Email address</th>
+                  <th scope="col">Installation site address</th>
+                  <th scope="col">Contact person name</th>
+                  <th scope="col">Contact number</th>
+                  <th scope="col">Email address</th>
+                  <th scope="col">Sales person name</th>
+                  <th scope="col">Contact number</th>
+                  <th scope="col">Email address</th>
+                  <th scope="col">Reference ID</th>
+                  <th scope="col">Action</th>
+              </tr>
+          </thead>
+
+          <tbody>
+            <% users.forEach((users, index) => { %>
+                <tr>
+                    <th scope="row"><%= users.id %></th>
+                     <td><%= users.conatctperson %></td>
+                    <td><%= users.companyname %></td>
+                    <td><%= users.address %></td>
+                    <td><%= users.postalcode %></td>
+                    <td><%= users.admincompanyname %></td>
+                    <td><%= users.admin_Contact_person %></td>
+                    <td><%= users.admin_Office_address %></td>
+                    <td><%= users.admin_conatct_Number %></td>
+                    <td><%= users.admin_email_address %></td>
+                    <td><%= users.installation_site_address %></td>
+                    <td><%= users.conatct_person_name %></td>
+                    <td><%= users.adminaddress %></td>
+                    <td><%= users.email %></td>
+                    <td><%= users.sales_person_name %></td>
+                    <td><%= users.sales_Person_contact_no %></td>
+                    <td><%= users.sales_Person_email %></td>
+                    <td><%= users.sales_person_reference_id %></td>
+                    
+                    <td>
+                         <a href="/customer/edit/<%= users.id%>" >Edit</a>
+                        <a href="/customer/delete/<%= users.id %>" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+        </table>
+        <% } else { %>
+          <p class="text-center">No players found. Go <a href="/customer/create" >here</a> to add players.</p>
+      <% } %>
+   </div>
+ </body>
+ </html>
