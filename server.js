@@ -8,14 +8,34 @@ var debug = require('debug')('express-sequelize');
 var http = require('http');
 var models = require('./model');
 
+var fs=require('fs');
+var pdf=require('html-pdf');
+var html=fs.readFileSync('/home/jampot/Documents/InstantConnect/views/requirement.ejs','utf8');
+var options = { format: 'a4' };
 //var routes = require('./routes/index');
 var customer  = require('./routes/customer');
+var requirements=require('./routes/s_requirementes');
+var registration=require('./routes/registration');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 
+
+// app.locals.pdf=require('html-pdf');
+// app.locals.html=fs.readFileSync('/home/jampot/Documents/InstantConnect/views/requirement.ejs','utf8');
+// app.locals.options={format:'a4'};
+// app.locals.fs=require('fs');
+
+
+
+app.set('views', path.join(__dirname, 'views'));
+app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
+
+
+//app.set('view engine', 'ejs');
+
 
 
 app.use(logger('dev'));
@@ -38,14 +58,40 @@ app.use(cookieParser());
 
 //app.use('/', routes);
 app.use('/customer', customer);
+app.use('/requirements', requirements);
+app.use('/registration',registration);
 
+
+// app.post('/requirements', function(req,res){
+//   console.log(req.body);
+//   var details=req.body;
+
+//   res.render('pdf.ejs',{details:details},function(err,html){
+//     pdf.create(html,options).toFile('../public/pdf/invoice.pdf',function(err,res){
+//       if(err){
+//         console.log(err);
+//       }
+//       else{
+//         console.log(res);
+//       }
+//     });
+//     res.send(html);
+//   });
+// });
 
 app.get('/',(req,res)=>{
-  res.render('customer')
+  res.render('index')
 })
+
+// app.get('/registration',(req,res)=>{
+//   res.render('registration')
+// })
+
+//app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(express.static('public'));
+app.use('/public',express.static('public'))
 
 app.use('/images',express.static(__dirname + '/images'));
 

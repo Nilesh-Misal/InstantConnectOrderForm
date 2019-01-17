@@ -69,7 +69,7 @@ router.post('/create', function(req, res) {
       //  console.log(req.body);
       
          
-      res.send('Your form is Successfully submitted ');
+      res.redirect('find');
         
       })
       .catch(function(err){
@@ -77,6 +77,27 @@ router.post('/create', function(req, res) {
     
       })
     });
+
+    router.get('/login',function(req,res){
+      res.render('index')
+      console.log('login successfully')
+
+    })
+
+    router.get('/signup',function(req,res){
+       // res.sendFile(__dirname +'/home/jampot/Documents/InstantConnect/views/registration.ejs');
+       // res.send();
+      //  res.redirect('/registration.ejs');
+      res.render('registration');
+      console.log('login successfully');
+
+    })
+
+    router.get('/registration',function(req,res){
+      res.render('requirement')
+      console.log('login successfully')
+
+    })
 
     router.get('/find/:id', function (req, res) {
         User.find({
@@ -91,28 +112,70 @@ router.post('/create', function(req, res) {
 
 
       router.get('/find', function (req, res) {
+
         User.findAll({
+
+         
           
          }).then(function(result) {
-          console.log(result);
-          res.send(result);
+         // console.log(result);
+         console.log('nilllllllllllllllleshhhhhhhhhhhhh')
+         // console.log(req.query);
+          res.render('find',{users:result});
         });
+                  //console.log(req.query);
+
       });
 
+      router.get('/edit/:id',function(req,res,next){
+
+        User.findById(req.params.id)
+        .then(function(user) {
+         //console.log(user);
+          res.render('customer', {users:user} )
+        }).catch((err) => {
+          res.render('error', err);
+        })
+      //   var data1=req.body;
+      //   var user=User.build();
+
+
+      //   console.log(data1);
+      //   var id=req.params.id;
+      //   console.log(id);
+      //   var data=req.body;
+      //   console.log(data);
+
+      //   // User.findById(req.params.id)
+      //   //  .then((user) => {
+       
+      //   User.update(data,{'where':{'id':req.params.id}
+      //   }).then(function(result){
+      //     console.log(result);
+      //    // return res.status(200).send(successEncode({status:'success','data':result,'message':'success'}));
+
+      //   res.render('edit',{data:result});
+      //   })
+      // });
+    });
+      
+
       router.get('/delete/:id', (req, res) => {
+      
         User.findById(req.params.id)
          .then((user) => {
             user.destroy({
                  where: {
                 id:req.params.id
                  }
-             }).then(() => {
-                console.log('successfully deleted');
-                res.send("successfully deleted");
-                      }).catch((err) => {
-                         res.render('error', err)
-                      })
+             }).then(function() {
+              // alert('succesfully deleted');
+              res.redirect('/customer/find');
+            }); 
+                     // res.redirect('find');
                   })
+                 
+
               })
       
 
