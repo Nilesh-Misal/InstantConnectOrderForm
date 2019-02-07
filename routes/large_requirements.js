@@ -139,7 +139,7 @@ router.post('/create',function(req,res){
 
     large_requirements.create(params).then(function(result){
         console.log(result);
-        res.redirect('/');
+        res.render('large_requirements');
     }).catch(function(err){
         console.log(err);
 

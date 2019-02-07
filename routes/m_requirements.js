@@ -4,7 +4,7 @@ const models=require('../model');
 var medium_requirement=models.medium_requirements;
 console.log(medium_requirement);
 
-
+const flash = require('express-flash-notification');
 var express= require('express');
 var router=express.Router();
 
@@ -121,10 +121,14 @@ var router=express.Router();
 
     medium_requirement.create(params).then(function(result){
         console.log(result);
-        res.redirect('/');
+       
+        
+        res.render('medium_requirements',{'message':' Successfully'});
+       // res.json({success: true});
     }).catch(function(err){
         console.log(err);
     });
+    // req.flash('successfully submitted')
 });
 
 

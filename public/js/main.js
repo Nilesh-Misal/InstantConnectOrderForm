@@ -2,9 +2,8 @@
 (function ($) {
     "use strict";
 
-
-     /*==================================================================
-    [ Focus input ]*/
+    /*==================================================================
+    [ Focus Contact2 ]*/
     $('.input100').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
@@ -15,8 +14,7 @@
             }
         })    
     })
-  
-  
+
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
@@ -65,7 +63,6 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
     
 
 })(jQuery);

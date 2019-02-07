@@ -1,11 +1,18 @@
 const models=require('../model');
 
+
 var registration=models.registration;
 console.log(registration);
 
 
 var express=require('express');
 var router=express.Router();
+
+
+// var session=require('express-session');
+
+// router.use(session({secret: 'ssshhhhh'}));
+
 
 
 router.post('/create',function(req,res){
@@ -25,8 +32,8 @@ router.post('/create',function(req,res){
 
     registration.create(params).then(function(result){
         console.log(result);
-        res.render('index');
-        res.send('You have successfully Registered');
+        res.redirect('/');
+        
         
     })
 
@@ -46,13 +53,20 @@ router.post('/login',function(req,res){
         console.log(result);
         if(result.email==username && result.password==password)
         {
-            res.render('user_profile',{name:result.first_name});
+            res.render('dashboard',{name:result.first_name});
             
         }
         else{
-            res.render('index')
+            res.render('/')
         }
     })
 })
 
+// router.get('requirements',function(req,res){
+//     res.render('user_profile');
+// })
+
+// router.get('large_requirements',function(req,res){
+//     res.render('user_profile');
+// })
 module.exports = router;
