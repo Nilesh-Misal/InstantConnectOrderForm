@@ -1,6 +1,9 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  var medium_requirements = sequelize.define('medium_requirements', {
+
+'use strict'
+
+module.exports=(sequelize,DataTypes)=>{
+    var large_requirements=sequelize.define('large_requirements',{
+       
     ictcbd1_cpu:DataTypes.STRING,
     ictcbd1_ram:DataTypes.STRING,
     ictcbd1_disk:DataTypes.STRING,
@@ -14,6 +17,29 @@ module.exports = (sequelize, DataTypes) => {
     ictcbd2_fqdn:DataTypes.STRING,
     ictcbd2_ipaddress:DataTypes.STRING,
     ictcbd2_macaddress:DataTypes.STRING,
+
+    webserver1_cpu:DataTypes.STRING,
+    webserver1_ram:DataTypes.STRING,
+    webserver1_disk:DataTypes.STRING,
+    webserver1_fqdn:DataTypes.STRING,
+    webserver1_ipaddress:DataTypes.STRING,
+    webserver1_macaddress:DataTypes.STRING,
+
+
+    webserver2_cpu:DataTypes.STRING,
+    webserver2_ram:DataTypes.STRING,
+    webserver2_disk:DataTypes.STRING,
+    webserver2_fqdn:DataTypes.STRING,
+    webserver2_ipaddress:DataTypes.STRING,
+    webserver2_macaddress:DataTypes.STRING,
+
+    webserver3_cpu:DataTypes.STRING,
+    webserver3_ram:DataTypes.STRING,
+    webserver3_disk:DataTypes.STRING,
+    webserver3_fqdn:DataTypes.STRING,
+    webserver3_ipaddress:DataTypes.STRING,
+    webserver3_macaddress:DataTypes.STRING,
+
 
     load_balencer1_cpu:DataTypes.STRING,
     load_balencer1_ram:DataTypes.STRING,
@@ -95,14 +121,14 @@ module.exports = (sequelize, DataTypes) => {
 
     
     
-       },
-  {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
-
-  return medium_requirements;
-};
+    },
+    {
+        classMethods: {
+          associate: function(models) {
+            // associations can be defined here
+          }
+        }
+    
+    });
+    return large_requirements;
+}

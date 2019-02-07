@@ -96,7 +96,7 @@ var router=express.Router();
 
     small_requirement.create(params).then(function(result){
         console.log(result);
-        res.render('requirement');
+        res.render('small_requirements');
     }).catch(function(err){
         console.log(err);
     });

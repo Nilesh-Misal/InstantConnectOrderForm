@@ -1,39 +1,54 @@
+var models=require('../model');
 
-const models=require('../model');
+var large_requirements=models.large_requirements;
+console.log(large_requirements);
 
-var medium_requirement=models.medium_requirements;
-console.log(medium_requirement);
-
-
-var express= require('express');
+var express=require('express');
 var router=express.Router();
 
- const uuidv4 = require('uuid/v4')
 
+router.post('/create',function(req,res){
 
+    console.log('hiiiiiiiiiiiiiiiiiiiiiiiiiiii');
 
- router.post('/create', function(req,res){
-
-    console.log('nileshhhhhhhhhhhhhhhhh');
-
-        var ic=req.body.ictcbd1_cpu;
-        console.log(ic);
-
-    var params={
-
+    var params ={
         ictcbd1_cpu:req.body.ictcbd1_cpu,
         ictcbd1_ram:req.body.ictcbd1_ram,
         ictcbd1_disk:req.body.ictcbd1_disk,
         ictcbd1_fqdn:req.body.ictcbd1_fqdn,
         ictcbd1_ipaddress:req.body.ictcbd1_ipaddress,
-        ictcbd1_macaddress:req.body.ictcbd1_macaddress,
+        ictcbd1_macaddress :req.body.ictcbd1_macaddress,
+
 
         ictcbd2_cpu:req.body.ictcbd2_cpu,
         ictcbd2_ram:req.body.ictcbd2_ram,
         ictcbd2_disk:req.body.ictcbd2_disk,
         ictcbd2_fqdn:req.body.ictcbd2_fqdn,
         ictcbd2_ipaddress:req.body.ictcbd2_ipaddress,
-        ictcbd2_macaddress:req.body.ictcbd2_macaddress,
+        ictcbd2_macaddress :req.body.ictcbd2_macaddress,
+
+        webserver1_cpu:req.body.webserver1_cpu,
+        webserver1_ram:req.body.webserver1_ram,
+        webserver1_disk:req.body.webserver1_disk,
+        webserver1_fqdn:req.body.webserver1_fqdn,
+        webserver1_ipaddress:req.body.webserver1_ipaddress,
+        webserver1_macaddress :req.body.webserver1_macaddress,
+
+        webserver2_cpu:req.body.webserver2_cpu,
+        webserver2_ram:req.body.webserver2_ram,
+        webserver2_disk:req.body.webserver2_disk,
+        webserver2_fqdn:req.body.webserver2_fqdn,
+        webserver2_ipaddress:req.body.webserver2_ipaddress,
+        webserver2_macaddress :req.body.webserver2_macaddress,
+
+
+
+        webserver3_cpu:req.body.webserver3_cpu,
+        webserver3_ram:req.body.webserver3_ram,
+        webserver3_disk:req.body.webserver3_disk,
+        webserver3_fqdn:req.body.webserver3_fqdn,
+        webserver3_ipaddress:req.body.webserver3_ipaddress,
+        webserver3_macaddress :req.body.webserver3_macaddress,
 
 
         load_balencer1_cpu:req.body.load_balencer1_cpu,
@@ -41,14 +56,15 @@ var router=express.Router();
         load_balencer1_disk:req.body.load_balencer1_disk,
         load_balencer1_fqdn:req.body.load_balencer1_fqdn,
         load_balencer1_ipaddress:req.body.load_balencer1_ipaddress,
-        load_balencer1_macaddress:req.body.load_balencer1_macaddress,
+        load_balencer1_macaddress :req.body.load_balencer1_macaddress,
+
 
         load_balencer2_cpu:req.body.load_balencer2_cpu,
         load_balencer2_ram:req.body.load_balencer2_ram,
         load_balencer2_disk:req.body.load_balencer2_disk,
         load_balencer2_fqdn:req.body.load_balencer2_fqdn,
         load_balencer2_ipaddress:req.body.load_balencer2_ipaddress,
-        load_balencer2_macaddress:req.body.load_balencer2_macaddress,
+        load_balencer2_macaddress :req.body.load_balencer2_macaddress,
 
 
         ums1_cpu:req.body.ums1_cpu,
@@ -114,31 +130,20 @@ var router=express.Router();
         rps_ipdaress:req.body.rps_ipdaress,
         rps_macaddress:req.body.rps_macaddress,
 
-    }
+  
 
+
+    }
     console.log(params);
 
 
-    medium_requirement.create(params).then(function(result){
+    large_requirements.create(params).then(function(result){
         console.log(result);
         res.redirect('/');
     }).catch(function(err){
         console.log(err);
-    });
-});
 
-
-router.get('/myrequiremets', function(req,res){
-
-    medium_requirement.find({
-        where:{
-            id:req.params.id
-        }
-    }).then(function(result){
-        console.log(result);
-        res.send(result);
     })
 })
 
-
-module.exports = router;
+module.exports=router;

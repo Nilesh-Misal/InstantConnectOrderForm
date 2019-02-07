@@ -46,8 +46,8 @@ router.post('/login',function(req,res){
         console.log(result);
         if(result.email==username && result.password==password)
         {
-            res.render('requirement')
-           // res.render('requirements')
+            res.render('user_profile',{name:result.first_name});
+            
         }
         else{
             res.render('index')

@@ -128,13 +128,21 @@ h1 {
         background-color: white;
         padding: 0; */
       
-         font-family: 'Trebuchet MS';
+         /* font-family: 'Trebuchet MS';
           padding: 0;
           float: left;
            background-color:white; 
-              max-width: 100%;   
+              max-width: 100%;    */
             /* margin: auto;  */
                  /* border: ridge;   */
+
+                 font-family: 'Trebuchet MS';
+                 padding: 15px;
+                 float: left;
+                 background-color: rgb(228, 221, 233);
+             max-width: 720px;   
+              margin: auto;
+                 border: ridge;
           }  
 
           /* .panel-body{
@@ -189,12 +197,22 @@ h1 {
               }
 
               .panel-body {
-                padding:500px;
+                /* padding:500px;
                 max-height: 100%;
                 overflow: hidden;
                 transition: max-height 15s ease-out;
-                background-color: #f1f1f1;
-              }
+                background-color: #f1f1f1; */
+                 
+                  font-family: 'Trebuchet MS';
+                font-style: normal;
+                display: block;
+                    padding: 15px 15px 15px 15px;
+                    background-color: rgb(228, 221, 233);
+                    width: 100%;
+                    font-weight: lighter;
+                  font-size: 15px;
+                }
+              
               
               .btn-group .button {
                 background-color: #4CAF50; /* Green */
@@ -232,4 +250,49 @@ h1 {
       [class*="main"]{
         width: 100%
       }
+  }
+
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    /* padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    width: 70%;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1; */
+
+    font-family: 'Trebuchet MS';
+    padding: 15px;
+    float: left;
+    background-color: rgb(228, 221, 233);
+max-width: 720px;   
+ margin: auto;
+    border: ridge;
   }

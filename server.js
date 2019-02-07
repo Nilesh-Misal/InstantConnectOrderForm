@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var debug = require('debug')('express-sequelize');
 var http = require('http');
 var models = require('./model');
+var expressLayouts = require('express-ejs-layouts');
+
 
 var fs=require('fs');
 var pdf=require('html-pdf');
@@ -15,6 +17,8 @@ var options = { format: 'a4' };
 //var routes = require('./routes/index');
 var customer  = require('./routes/customer');
 var requirements=require('./routes/s_requirementes');
+var medium_requirements=require('./routes/m_requirements');
+var large_requirements=require('./routes/large_requirements');
 var registration=require('./routes/registration');
 
 var app = express();
@@ -29,37 +33,35 @@ var app = express();
 
 
 
+// app.set('views', [path.join(__dirname, 'views'),
+//                   path.join(__dirname, 'views/include/')]);
+
+
 app.set('views', path.join(__dirname, 'views'));
-app.engine('ejs', require('ejs').renderFile);
+// app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
-
-
 //app.set('view engine', 'ejs');
-
-
+app.use(expressLayouts);
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
-
-
-
 /**
  * Get port from environment and store in Express.
  */
 
 // app.set('port', 8000);
-
-
  let port = '4300'
 
 //app.use('/', routes);
 app.use('/customer', customer);
 app.use('/requirements', requirements);
+app.use('/medium_requirements',medium_requirements);
+app.use('/large_requirements',large_requirements);
 app.use('/registration',registration);
+
 
 
 // app.post('/requirements', function(req,res){
