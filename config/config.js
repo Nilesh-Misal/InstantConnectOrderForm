@@ -3,7 +3,7 @@ module.exports = {
     "development": {
         username:"root",
         host: "localhost",
-        password:"",
+        password:"Jampot@123",
         database: "instantConnect",
         dialect: "mysql",
         connectionLimit:10,   
