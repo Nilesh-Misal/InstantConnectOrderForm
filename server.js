@@ -31,18 +31,6 @@ var app = express();
 
 //app.set('views', path.join(__dirname, 'views'));
 
-
-// app.locals.pdf=require('html-pdf');
-// app.locals.html=fs.readFileSync('/home/jampot/Documents/InstantConnect/views/requirement.ejs','utf8');
-// app.locals.options={format:'a4'};
-// app.locals.fs=require('fs');
-
-
-
-// app.set('views', [path.join(__dirname, 'views'),
-//                   path.join(__dirname, 'views/include/')]);
-
-
   app.set('views', path.join(__dirname, 'views'));
   app.engine('ejs', require('ejs').renderFile);
   app.set('view engine', 'ejs');
