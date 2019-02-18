@@ -101,7 +101,7 @@ models.sequelize.sync().then(function() {
   /**
    * Listen on provided port, on all network interfaces.
    */
-  app.listen(4300, function() {
+  app.listen(4400, function() {
     console.log('Express app listening on port ' + port);
   });
   app.on('error', onError);
