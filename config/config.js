@@ -4,7 +4,7 @@ module.exports = {
         username:"root",
         host: "localhost",
         password:"Jampot@123",
-        database: "instantConnect",
+        database: "test",
         dialect: "mysql",
         connectionLimit:10,   
         multipleStatements :true ,    
