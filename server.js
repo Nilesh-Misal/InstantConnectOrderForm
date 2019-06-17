@@ -50,7 +50,7 @@ app.use(session({secret: 'ssshhhhh'}));
  */
 
 // app.set('port', 8000);
- let port = '4300'
+ let port = '4444'
 
 //app.use('/', routes);
 app.use('/customer', customer);
@@ -101,7 +101,7 @@ models.sequelize.sync().then(function() {
   /**
    * Listen on provided port, on all network interfaces.
    */
-  app.listen(4400, function() {
+  app.listen(4444, function() {
     console.log('Express app listening on port ' + port);
   });
   app.on('error', onError);
@@ -162,7 +162,7 @@ function onError(error) {
 
 function onListening() {
 
-  console.log('Listening on ' + 4300);
+  console.log('Listening on ' + 4444);
 }
 
 module.exports=app;
